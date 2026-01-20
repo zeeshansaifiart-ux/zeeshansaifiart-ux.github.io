@@ -774,7 +774,7 @@ Header Style
 }
 
 .pre-header .left-info ul li:last-child {
-  margin-right: 0px;
+  margin-right: 10px;
   padding-right: 0px;
   border-right: none;
 }
@@ -1989,4 +1989,5 @@ body {
   }
 
 }
+
 
