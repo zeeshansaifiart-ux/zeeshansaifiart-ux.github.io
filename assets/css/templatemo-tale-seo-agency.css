@@ -135,7 +135,7 @@ body {
 .main-button a {
   font-size: 14px;
   color: #fff;
-  background-color: #5b03e4;
+  background-color: #0d0d94;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -148,7 +148,7 @@ body {
 }
 
 .main-button a:hover {
-  background-color: #5b03e4;
+  background-color: #0a044d;
   color: #fff;
   opacity: 0.8;
 }
@@ -202,12 +202,12 @@ body {
 }
 
 .section-heading h2 em {
-  color: #5b03e4;
+  color: #090448;
   font-style: normal;
 }
 
 .section-heading h2 span {
-  color: #c03afe;
+  color: #0d0d9b;
 }
 
 /* 
@@ -335,7 +335,7 @@ Header Style
 .header-area {
   position: absolute;
   background: rgb(85,0,227);
-  background: linear-gradient(90deg, rgba(9,3,71,22) 0%, rgba(22,45,201,41) 100%);
+  background: linear-gradient(90deg, rgba(9,2,71,22) 0%, rgba(20,36,192,43) 100%);
   height: 110px;
   top: 57px;
   left: 0;
@@ -363,7 +363,8 @@ Header Style
 }
 
 .background-header .main-nav .logo {
-  margin-top: 2px;
+  margin-top: 0px;
+  background-: #fff;
 }
 
 .header-area .main-nav .nav {
@@ -434,8 +435,7 @@ Header Style
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #fff;
-  opacity: 0.8;
+  color: #ebe42d;
 }
 
 .background-header .main-nav .nav li:hover a,
@@ -675,7 +675,7 @@ Header Style
     width: 100%;
   }
   .header-area {
-    background-color: #f7f7f7;
+    background-color: ##F54927;
     padding: 0px 15px;
     height: 100px;
     box-shadow: none;
@@ -771,6 +771,7 @@ Header Style
 
 .pre-header ul li {
   display: inline-block;
+  margin-left: 10px;
 }
 
 .pre-header .left-info ul li:last-child {
@@ -787,6 +788,7 @@ Header Style
 
 .pre-header .left-info ul li a {
   font-size: 14px;
+  margin-left: 5px;
 }
 
 .pre-header .left-info ul li a i {
@@ -828,12 +830,12 @@ Banner Style
 }
 
 .main-banner:after {
-  content: url(../images/banner-right.png);
+  content: url(../images/banner1.png);
   top: -1px;
   right: 0;
   position: absolute;
-  width: 861px;
-  height: 746px;
+  width: 700px;
+  height: 700spx;
   z-index: -1;
 }
 
@@ -866,16 +868,15 @@ Banner Style
   color: #2a2a2a;
   font-weight: 700;
   line-height: 70px;
-  margin-bottom: 20px;
 }
 
 .main-banner h4 em {
   font-style: normal;
-  color: #5b03e4;
+  color: #090448;
 }
 
 .main-banner h4 span {
-  color: #c03afe;
+  color: #0d0d9b;
 }
 
 .main-banner p {
@@ -912,15 +913,23 @@ Services Style
   padding-right: 30px;
 }
 
+
 .services::before {
-  content: url(../images/services-left.jpg);
-  top: 120px;
-  left: 0;
+  content: "";
   position: absolute;
-  width: 844px;
-  height: 714px;
-  z-index: -1;
+  top: 45px;
+  left: 150px;
+  width: 500px;
+  height: 640px;
+
+  background-image: url("../images/services-left.jpg");
+  background-size: contain;      /* or cover */
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  z-index: -1;   /* content ke peeche rahe */
 }
+
 
 .services::after {
   content: url(../images/contact-left.jpg);
@@ -938,10 +947,15 @@ Services Style
   border: 1px solid #f3d7ff;
   border-radius: 23px;
   padding: 30px;
-  background-color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 3, 75, 0.05) 0%,
+    rgba(20, 35, 187, 0.05) 100%
+  );
   margin-bottom: 30px;
   transition: all .4s;
 }
+
 
 .services .service-item h4 {
   font-size: 20px;
@@ -953,7 +967,7 @@ Services Style
 
 .services .service-item:hover {
   border-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px rgba(20, 35, 187, 0.8);
 }
 
 .services .service-item:hover h4 {
@@ -1987,7 +2001,4 @@ body {
     padding: 60px;
     border-radius: 23px;
   }
-
 }
-
-
