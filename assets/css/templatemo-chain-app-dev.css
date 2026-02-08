@@ -264,8 +264,8 @@ body {
 .border-button a {
   display: inline-block !important;
   padding: 10px 20px !important;
-  color: #4b8ef1 !important;
-  border: 1px solid #4b8ef1;
+  color: #5e32ff !important;
+  border: 1px solid #5e32ff;
   text-transform: capitalize;
   font-size: 15px;
   display: inline-block;
@@ -277,7 +277,7 @@ body {
 }
 
 .border-button a:hover {
-  background-color: #4b8ef1;
+  background-color: #5e32ff;
   color: #fff !important;
 }
 
@@ -1135,7 +1135,7 @@ About Us
 }
 
 .about-us .box-item:hover h4 a {
-  color: #4b8ef1;
+  color: #5e32ff;
 }
 
 .about-us .gradient-button {
@@ -1231,7 +1231,7 @@ The Clients
 .the-clients .naccs .menu div.active i,
 .the-clients .naccs .menu div.active span.rating,
 .the-clients .naccs .menu div.active .thumb {
-  color: #4b8ef1;
+  color: #5e32ff;
 }
 
 .the-clients ul.nacc {
@@ -1274,15 +1274,20 @@ The Clients
   background-size: cover;
   border-radius: 50px;
   width: 100%;
+  text-align: center;
   height: auto;
   background-repeat: no-repeat;
 }
+
+
 
 .the-clients .nacc .thumb .client-content p {
   color: #fff;
   font-weight: 500;
   font-size: 16px;
   font-style: italic;
+
+  text-align: center;
   margin-top: 30px;
 }
 
@@ -1319,173 +1324,151 @@ The Clients
 ---------------------------------------------
 */
 
-.pricing-tables {
-  padding-top: 130px;
+/* =========================
+   PRICING TABLE FIX (FINAL)
+   ========================= */
+
+/* Bootstrap column equal height */
+.pricing-tables .col-lg-4 {
+  display: flex;
 }
 
-.pricing-tables  .section-heading {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.pricing-tables  .section-heading p {
-  margin-top: 10px;
-  margin-left: 18%;
-  margin-right: 18%;
-}
-
-.pricing-item-regular {
-  margin-top: 30px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
-  border-radius: 50px;
-  padding: 90px 30px;
+/* Common card styles */
+.pricing-item-regular,
+.pricing-item-pro {
+  flex: 1;
+  min-height: 720px;          /* SAME HEIGHT */
+  padding: 100px 30px;
   text-align: center;
   position: relative;
-  z-index: 1;
+  margin-top: 100px;
+  border-radius: 50px;
   overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Hover effect */
+.pricing-item-regular:hover,
+.pricing-item-pro:hover {
+  transform: scale(1.06);
+  z-index: 20;
+  box-shadow: 0px 25px 45px rgba(0,0,0,0.15);
+}
+
+/* ================= REGULAR ================= */
+
 .pricing-item-regular:before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../images/regular-table-top.png);
-  z-index: 0;
-  content: '';
   width: 274px;
   height: 221px;
+  background-image: url(../images/pro-table-top.png);
+  z-index: 0;
 }
 
 .pricing-item-regular:after {
+  content: '';
   position: absolute;
   bottom: 0;
   right: 0;
-  background-image: url(../images/regular-table-bottom.png);
-  z-index: 0;
-  content: '';
   width: 370px;
   height: 171px;
+  background-image: url(../images/pro-table-bottom.png);
+  z-index: 0;
 }
 
-.pricing-item-regular span.price {
-  font-size: 40px;
-  color: #fff;
-  position: absolute;
-  font-weight: 700;
-  z-index: 1;
-  left: 30px;
-  top: 30px;
-}
-
-.pricing-item-regular h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.pricing-item-regular .icon img {
-  width: 120px;
-  height: 106px;
-  margin-bottom: 30px;
-}
-
-.pricing-item-regular ul li {
-  color: #4b8ef1;
-  font-size: 15px;
-  margin-bottom: 15px;
-}
-
-.pricing-item-regular ul li:last-child {
-  margin-bottom: 0px;
-}
-
-.pricing-item-regular ul li.non-function {
-  color: #afafaf;
-  text-decoration: line-through;
-}
-
-.pricing-item-regular .border-button {
-  position: relative;
-  z-index: 1;
-  margin-top: 40px;
-}
-
-.pricing-item-pro {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
-  border-radius: 50px;
-  padding: 120px 30px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
+/* ================= PRO ================= */
 
 .pricing-item-pro:before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../images/pro-table-top.png);
-  z-index: 0;
-  content: '';
   width: 281px;
   height: 251px;
+  background-image: url(../images/pro-table-top.png);
+  z-index: 0;
 }
 
 .pricing-item-pro:after {
+  content: '';
   position: absolute;
   bottom: 0;
   right: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../images/pro-table-bottom.png);
-  z-index: 0;
-  content: '';
   width: 100%;
   height: 201px;
+  background-image: url(../images/pro-table-bottom.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
+/* ================= CONTENT ================= */
+
+.pricing-item-regular span.price,
 .pricing-item-pro span.price {
-  font-size: 40px;
-  color: #fff;
   position: absolute;
-  font-weight: 700;
-  z-index: 1;
-  left: 30px;
   top: 30px;
+  left: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
 }
 
+.pricing-item-regular h4,
 .pricing-item-pro h4 {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-top: 70px;
+  z-index: 2;
 }
 
+.pricing-item-regular .icon img,
 .pricing-item-pro .icon img {
   width: 120px;
   height: 106px;
-  margin-bottom: 30px;
+  margin: 30px auto;
+  z-index: 2;
 }
 
+.pricing-item-regular ul,
+.pricing-item-pro ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 2;
+}
+
+.pricing-item-regular ul li,
 .pricing-item-pro ul li {
-  color: #4b8ef1;
   font-size: 15px;
+  color: black;
   margin-bottom: 15px;
 }
 
-.pricing-item-pro ul li:last-child {
-  margin-bottom: 0px;
-}
-
+.pricing-item-regular ul li.non-function,
 .pricing-item-pro ul li.non-function {
   color: #afafaf;
   text-decoration: line-through;
 }
 
+/* Button always bottom */
+.pricing-item-regular .border-button,
 .pricing-item-pro .border-button {
-  position: relative;
-  z-index: 1;
-  margin-top: 40px;
+  margin-top: auto;
+  z-index: 2;
 }
+
 
 
 
