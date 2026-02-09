@@ -117,14 +117,39 @@ https://templatemo.com/tm-570-chain-app-dev
             </div>
         </div> -->
 
-     <section class="container my-5">
-  <div class="row" id="gallery"></div>
+    <section class="container-fluid my-5 px-4">
+  <div class="row gallery-row">
+
+    <!-- IMAGE 1 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
+      <img src="uploads/cascading-waterfall.jpg"
+           onmouseover="showPreview(this.src)"
+           onmouseout="hidePreview()">
+    </div>
+
+    <!-- IMAGE 2 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
+      <img src="uploads/forest-path.jpg"
+           onmouseover="showPreview(this.src)"
+           onmouseout="hidePreview()">
+    </div>
+
+    <!-- IMAGE 3 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
+      <img src="uploads/ocean-sunset-golden-hour.jpg"
+           onmouseover="showPreview(this.src)"
+           onmouseout="hidePreview()">
+    </div>
+
+    <!-- IMAGE 4 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
+      <img src="uploads/rolling-sand-dunes.jpg"
+           onmouseover="showPreview(this.src)"
+           onmouseout="hidePreview()">
+    </div>
+
+  </div>
 </section>
-
-<div class="preview" id="preview">
-  <img id="previewImg">
-</div>
-
 
 
   <footer id="newsletter">
@@ -178,41 +203,18 @@ https://templatemo.com/tm-570-chain-app-dev
     </div>
   </footer>
 
-<div class="preview" id="preview">
+          <div class="preview" id="preview">
   <img id="previewImg">
 </div>
 
 <script>
-const username = "zeeshansafiar-ux";   // 👈 GitHub username
-const repo = "zeeshansafiar-ux";       // 👈 repo name
-const folder = "uploads";              // 👈 images folder
-
-fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`)
-  .then(res => res.json())
-  .then(files => {
-    let html = "";
-
-    files.forEach(file => {
-      if (file.type === "file" && file.name.match(/\.(jpg|jpeg|png|webp)$/i)) {
-        html += `
-          <div class="col-md-4 mb-4 gallery-item">
-            <img src="${file.download_url}"
-              onmouseover="showPreview('${file.download_url}')"
-              onmouseout="hidePreview()">
-          </div>`;
-      }
-    });
-
-    document.getElementById("gallery").innerHTML = html;
-  });
-
 function showPreview(src){
-  document.getElementById("preview").style.display = "flex";
-  document.getElementById("previewImg").src = src;
+  document.getElementById('preview').style.display = 'flex';
+  document.getElementById('previewImg').src = src;
 }
 
 function hidePreview(){
-  document.getElementById("preview").style.display = "none";
+  document.getElementById('preview').style.display = 'none';
 }
 </script>
 
@@ -227,6 +229,7 @@ function hidePreview(){
   <script src="assets/js/custom.js"></script>
 </body>
 </html>
+
 
 
 
