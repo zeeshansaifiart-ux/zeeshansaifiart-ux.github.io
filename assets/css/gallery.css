@@ -1,15 +1,25 @@
+.gallery-row {
+  row-gap: 30px;
+}
+
+.gallery-item {
+  height: 450px;            /* 👈 row size (400–500 adjust here) */
+  overflow: hidden;
+  cursor: pointer;
+}
+
 .gallery-item img {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
-  transition: 0.3s;
-  cursor: zoom-in;
+  transition: transform 0.4s ease;
 }
 
-.gallery-item img:hover {
-  transform: scale(1.1);
+.gallery-item:hover img {
+  transform: scale(1.15);
 }
 
+/* Right-side preview */
 .preview {
   position: fixed;
   top: 0;
