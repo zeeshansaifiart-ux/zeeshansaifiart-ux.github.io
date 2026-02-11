@@ -33,6 +33,8 @@ font & reset css
 reset
 --------------------------------------------- 
 */
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -42,6 +44,43 @@ figure, header, nav, section, article, aside, footer, figcaption {
   border: 0;
   outline: 0;
 }
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* maintain aspect ratio */
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.1);
+}
+
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 
 /* clear fix */
 .grid:after {
@@ -959,6 +998,12 @@ Banner Style
 Services Style
 --------------------------------------------- 
 */
+
+/* Push content below fixed header */
+.gallery-section {
+  padding-top: 1140px;   /* adjust if needed */
+}
+
 
 .services {
   padding-top: 130px;
